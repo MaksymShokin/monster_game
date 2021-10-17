@@ -30,7 +30,13 @@ func executeRound() string {
 
 	playerChoice := interactions.GetPlayerChoice(hasSpecialAttack)
 
-	fmt.Printf("Your choice is: %v \n", playerChoice)
+	if playerChoice == "ATTACK" {
+
+	} else if playerChoice == "HEAL" {
+
+	} else {
+		
+	}
 
 	return ""
 }
