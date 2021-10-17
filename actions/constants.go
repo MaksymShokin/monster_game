@@ -1,0 +1,4 @@
+package actions
+
+const PLAYER_STARTING_HEALTH = 100
+const MONSTER_STARTING_HEALTH = 150

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"monster_game/interactions"
 )
 
@@ -35,7 +34,7 @@ func executeRound() string {
 	} else if playerChoice == "HEAL" {
 
 	} else {
-		
+
 	}
 
 	return ""

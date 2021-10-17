@@ -8,8 +8,8 @@ import (
 var randSource = rand.NewSource(time.Now().UnixNano())
 var randGenerator = rand.New(randSource)
 
-var MonsterHealth = 150
-var PlayerHealth = 100
+var MonsterHealth = MONSTER_STARTING_HEALTH
+var PlayerHealth = PLAYER_STARTING_HEALTH
 
 func AttackMonster(isSpecial bool) {
 	var attackPower int
@@ -27,8 +27,8 @@ func HealPlayer() {
 
 	PlayerHealth += healPower
 
-	if PlayerHealth > 100 {
-		PlayerHealth = 100
+	if PlayerHealth > PLAYER_STARTING_HEALTH {
+		PlayerHealth = PLAYER_STARTING_HEALTH
 	}
 }
 
