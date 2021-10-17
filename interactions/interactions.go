@@ -17,4 +17,5 @@ func ShowAvailableActions(hasSpecialAttack bool) {
 	if hasSpecialAttack {
 		fmt.Println("3. Perform special attack")
 	}
+
 }
