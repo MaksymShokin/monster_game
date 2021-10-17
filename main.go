@@ -2,6 +2,8 @@ package main
 
 import "monster_game/interactions"
 
+var currentRound = 0
+
 func main() {
 	startGame()
 
@@ -19,6 +21,11 @@ func startGame() {
 
 }
 func executeRound() string {
+	currentRound++
+	hasSpecialAttack := currentRound%3 == 0
+	interactions.ShowAvailableActions(hasSpecialAttack)
+
+	
 	return ""
 }
 
