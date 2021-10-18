@@ -16,7 +16,7 @@ func main() {
 		winner = executeRound()
 	}
 
-	endGame()
+	endGame(winner)
 }
 
 func startGame() {
@@ -54,6 +54,6 @@ func executeRound() string {
 	return ""
 }
 
-func endGame() {
-
+func endGame(winner string) {
+	interactions.DeclareWinner(winner)
 }

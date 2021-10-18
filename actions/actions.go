@@ -24,7 +24,7 @@ func AttackMonster(isSpecial bool)  {
 }
 
 func HealPlayer() {
-	healPower := generateRandBetween(25, 35)
+	healPower := generateRandBetween(20, 50)
 
 	playerHealth += healPower
 

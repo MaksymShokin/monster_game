@@ -17,5 +17,11 @@ func ShowAvailableActions(hasSpecialAttack bool) {
 	if hasSpecialAttack {
 		fmt.Println("3. Perform special attack")
 	}
+}
 
+func DeclareWinner(winner string) {
+	fmt.Println("------------------")
+	fmt.Println("GAME OVER!")
+	fmt.Println("------------------")
+	fmt.Printf("%v WON THE BATTLE \n", winner)
 }
