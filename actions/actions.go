@@ -8,10 +8,10 @@ import (
 var randSource = rand.NewSource(time.Now().UnixNano())
 var randGenerator = rand.New(randSource)
 
-var MonsterHealth = MONSTER_STARTING_HEALTH
-var PlayerHealth = PLAYER_STARTING_HEALTH
+var monsterHealth = MONSTER_STARTING_HEALTH
+var playerHealth = PLAYER_STARTING_HEALTH
 
-func AttackMonster(isSpecial bool) {
+func AttackMonster(isSpecial bool)  {
 	var attackPower int
 	if isSpecial {
 		attackPower = generateRandBetween(10, 25)
@@ -19,23 +19,27 @@ func AttackMonster(isSpecial bool) {
 		attackPower = generateRandBetween(15, 35)
 	}
 
-	MonsterHealth -= attackPower
+	monsterHealth -= attackPower
+
 }
 
 func HealPlayer() {
 	healPower := generateRandBetween(25, 35)
 
-	PlayerHealth += healPower
+	playerHealth += healPower
 
-	if PlayerHealth > PLAYER_STARTING_HEALTH {
-		PlayerHealth = PLAYER_STARTING_HEALTH
+	if playerHealth > PLAYER_STARTING_HEALTH {
+		playerHealth = PLAYER_STARTING_HEALTH
 	}
+
 }
 
-func AttackPlayer() {
+func AttackPlayer() (int, int) {
 	attackPower := generateRandBetween(15, 30)
 
-	PlayerHealth -= attackPower
+	playerHealth -= attackPower
+
+	return playerHealth, monsterHealth
 }
 
 func generateRandBetween(min int, max int) int {
