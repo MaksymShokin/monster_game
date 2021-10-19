@@ -2,6 +2,7 @@ package interactions
 
 import (
 	"fmt"
+	"os"
 )
 
 type RoundData struct {
@@ -70,4 +71,28 @@ func PrintRoundData(roundData *RoundData) {
 	fmt.Printf("Monster attacked player for %v. \n", roundData.MonsterAttackDmg)
 	fmt.Printf("Player health: %v. \n", roundData.PlayerHealth)
 	fmt.Printf("Monster health: %v. \n", roundData.MonsterHealth)
+}
+
+func WriteLogFile(rounds *[]RoundData) {
+	file, err := os.Create("gamelog.txt")
+
+	if err != nil {
+		fmt.Println("Writing log failed")
+		return
+	}
+
+	for index, value := range *rounds {
+		round := fmt.Sprintf(
+			"Round: %v\nAction: %v\nPlayer Attack Dmg: %v\nMonster Attack Dmg %v\nPlayer Heal %v\nPlayer Health %v\nMonster Health %v\n----------------------- \n",
+			index + 1,
+			value.Action,
+			value.PlayerAttackDmg,
+			value.MonsterAttackDmg,
+			value.PlayerHeal,
+			value.PlayerHealth,
+			value.MonsterHealth,
+		)
+
+		file.WriteString(round)
+	}
 }

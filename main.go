@@ -6,6 +6,7 @@ import (
 )
 
 var currentRound = 0
+var gameRounds = []interactions.RoundData{}
 
 func main() {
 	startGame()
@@ -57,6 +58,8 @@ func executeRound() string {
 
 	interactions.PrintRoundData(&roundData)
 
+	gameRounds = append(gameRounds, roundData)
+
 	if playerHealth <= 0 {
 		return "Monster"
 	}
@@ -70,4 +73,5 @@ func executeRound() string {
 
 func endGame(winner string) {
 	interactions.DeclareWinner(winner)
+	interactions.WriteLogFile(&gameRounds)
 }
