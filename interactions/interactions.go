@@ -83,8 +83,8 @@ func WriteLogFile(rounds *[]RoundData) {
 
 	for index, value := range *rounds {
 		round := fmt.Sprintf(
-			"Round: %v\nAction: %v\nPlayer Attack Dmg: %v\nMonster Attack Dmg %v\nPlayer Heal %v\nPlayer Health %v\nMonster Health %v\n----------------------- \n",
-			index + 1,
+			"Round: %v\nAction: %v\nPlayer Attack Dmg: %v\nMonster Attack Dmg %v\nPlayer Heal %v\nPlayer Health %v\nMonster Health %v\n-----------------------\n",
+			index+1,
 			value.Action,
 			value.PlayerAttackDmg,
 			value.MonsterAttackDmg,
@@ -93,6 +93,13 @@ func WriteLogFile(rounds *[]RoundData) {
 			value.MonsterHealth,
 		)
 
-		file.WriteString(round)
+		_, err := file.WriteString(round)
+
+		if err != nil {
+			fmt.Println("Writing to file failed")
+			continue
+		}
 	}
+
+	file.Close()
 }

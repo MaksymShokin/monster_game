@@ -1,64 +1,128 @@
 Round: 1
 Action: ATTACK
-PlayerAttackDmg: 27
-MonsterAttackDmg 25
-playerHeal 0
-playerHealth 75
-monsterHealth 123
- ----------------------- 
+Player Attack Dmg: 15
+Monster Attack Dmg 21
+Player Heal 0
+Player Health 79
+Monster Health 135
+-----------------------
 Round: 2
-Action: ATTACK
-PlayerAttackDmg: 28
-MonsterAttackDmg 15
-playerHeal 0
-playerHealth 60
-monsterHealth 95
- ----------------------- 
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 26
+Player Heal 34
+Player Health 87
+Monster Health 135
+-----------------------
 Round: 3
-Action: SPECIAL
-PlayerAttackDmg: 21
-MonsterAttackDmg 19
-playerHeal 0
-playerHealth 41
-monsterHealth 74
- ----------------------- 
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 28
+Player Heal 32
+Player Health 91
+Monster Health 135
+-----------------------
 Round: 4
 Action: HEAL
-PlayerAttackDmg: 0
-MonsterAttackDmg 24
-playerHeal 53
-playerHealth 70
-monsterHealth 74
- ----------------------- 
+Player Attack Dmg: 0
+Monster Attack Dmg 27
+Player Heal 37
+Player Health 101
+Monster Health 135
+-----------------------
 Round: 5
 Action: HEAL
-PlayerAttackDmg: 0
-MonsterAttackDmg 17
-playerHeal 49
-playerHealth 102
-monsterHealth 74
- ----------------------- 
+Player Attack Dmg: 0
+Monster Attack Dmg 15
+Player Heal 29
+Player Health 115
+Monster Health 135
+-----------------------
 Round: 6
-Action: SPECIAL
-PlayerAttackDmg: 23
-MonsterAttackDmg 17
-playerHeal 0
-playerHealth 85
-monsterHealth 51
- ----------------------- 
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 19
+Player Heal 50
+Player Health 146
+Monster Health 135
+-----------------------
 Round: 7
-Action: ATTACK
-PlayerAttackDmg: 34
-MonsterAttackDmg 23
-playerHeal 0
-playerHealth 62
-monsterHealth 17
- ----------------------- 
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 27
+Player Heal 18
+Player Health 137
+Monster Health 135
+-----------------------
 Round: 8
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 26
+Player Heal 41
+Player Health 152
+Monster Health 135
+-----------------------
+Round: 9
+Action: SPECIAL
+Player Attack Dmg: 13
+Monster Attack Dmg 29
+Player Heal 0
+Player Health 123
+Monster Health 122
+-----------------------
+Round: 10
 Action: ATTACK
-PlayerAttackDmg: 28
-MonsterAttackDmg 20
-playerHeal 0
-playerHealth 42
-monsterHealth -11
- ----------------------- 
+Player Attack Dmg: 23
+Monster Attack Dmg 15
+Player Heal 0
+Player Health 108
+Monster Health 99
+-----------------------
+Round: 11
+Action: ATTACK
+Player Attack Dmg: 25
+Monster Attack Dmg 26
+Player Heal 0
+Player Health 82
+Monster Health 74
+-----------------------
+Round: 12
+Action: ATTACK
+Player Attack Dmg: 34
+Monster Attack Dmg 29
+Player Heal 0
+Player Health 53
+Monster Health 40
+-----------------------
+Round: 13
+Action: ATTACK
+Player Attack Dmg: 25
+Monster Attack Dmg 25
+Player Heal 0
+Player Health 28
+Monster Health 15
+-----------------------
+Round: 14
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 23
+Player Heal 19
+Player Health 24
+Monster Health 15
+-----------------------
+Round: 15
+Action: HEAL
+Player Attack Dmg: 0
+Monster Attack Dmg 22
+Player Heal 51
+Player Health 53
+Monster Health 15
+-----------------------
+Round: 16
+Action: ATTACK
+Player Attack Dmg: 30
+Monster Attack Dmg 26
+Player Heal 0
+Player Health 27
+Monster Health -15
+-----------------------
