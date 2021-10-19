@@ -1,6 +1,8 @@
 package interactions
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type RoundData struct {
 	Action           string
@@ -10,6 +12,26 @@ type RoundData struct {
 	PlayerHealth     int
 	MonsterHealth    int
 }
+
+// func CreateRoundData(
+// 	action string,
+// 	playerAttackDmg int,
+// 	playerHeal int,
+// 	monsterAttackDmg int,
+// 	playerHealth int,
+// 	monsterHealth int,
+// ) *RoundData {
+// 	data := RoundData{
+// 		Action:           action,
+// 		PlayerAttackDmg:  playerAttackDmg,
+// 		PlayerHeal:       playerHeal,
+// 		MonsterAttackDmg: monsterAttackDmg,
+// 		PlayerHealth:     playerHealth,
+// 		MonsterHealth:    monsterHealth,
+// 	}
+
+// 	return &data
+// }
 
 func PrintGreetings() {
 	fmt.Println("MONSTER SLAYER")

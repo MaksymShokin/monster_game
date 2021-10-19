@@ -11,7 +11,7 @@ var randGenerator = rand.New(randSource)
 var monsterHealth = MONSTER_STARTING_HEALTH
 var playerHealth = PLAYER_STARTING_HEALTH
 
-func AttackMonster(isSpecial bool)  {
+func AttackMonster(isSpecial bool) int {
 	var attackPower int
 	if isSpecial {
 		attackPower = generateRandBetween(10, 25)
@@ -21,24 +21,30 @@ func AttackMonster(isSpecial bool)  {
 
 	monsterHealth -= attackPower
 
+	return attackPower
 }
 
-func HealPlayer() {
-	healPower := generateRandBetween(20, 50)
+func HealPlayer() int {
+	healPower := generateRandBetween(15, 55)
+
+	if playerHealth+healPower > 200 {
+		healPower = 200 - playerHealth
+	}
 
 	playerHealth += healPower
 
-	if playerHealth > PLAYER_STARTING_HEALTH {
-		playerHealth = PLAYER_STARTING_HEALTH
-	}
-
+	return healPower
 }
 
-func AttackPlayer() (int, int) {
+func AttackPlayer() int {
 	attackPower := generateRandBetween(15, 30)
 
 	playerHealth -= attackPower
 
+	return attackPower
+}
+
+func GetHealthValues() (int, int) {
 	return playerHealth, monsterHealth
 }
 
