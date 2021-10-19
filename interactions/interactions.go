@@ -3,6 +3,8 @@ package interactions
 import (
 	"fmt"
 	"os"
+
+	"github.com/common-nighthawk/go-figure"
 )
 
 type RoundData struct {
@@ -35,7 +37,8 @@ type RoundData struct {
 // }
 
 func PrintGreetings() {
-	fmt.Println("MONSTER SLAYER")
+	monsterFigure := figure.NewFigure("MONSTER SLAYER", "", true)
+	monsterFigure.Print()
 	fmt.Println("moster is comming...")
 	fmt.Println("GOOD LUCK")
 }
@@ -53,7 +56,8 @@ func ShowAvailableActions(hasSpecialAttack bool) {
 
 func DeclareWinner(winner string) {
 	fmt.Println("------------------")
-	fmt.Println("GAME OVER!")
+	monsterFigure := figure.NewColorFigure("GAME OVER!", "", "green", true)
+	monsterFigure.Print()
 	fmt.Println("------------------")
 	fmt.Printf("%v WON THE BATTLE \n", winner)
 }
